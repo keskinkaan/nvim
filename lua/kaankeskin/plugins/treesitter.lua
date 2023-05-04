@@ -33,6 +33,18 @@ treesitter.setup({
     "dockerfile",
     "gitignore",
   },
+
+  --> rainbow tags
+	rainbow = {
+		enable = true,
+		extended_mode = true,
+		max_file_lines = nil,
+	},
+	context_commentstring = {
+		enable = false,
+		enable_autocmd = false,
+	},
+  
   -- auto install above language parsers
   auto_install = true,
 })

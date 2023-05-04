@@ -2,7 +2,7 @@
 -- in case it isn't installed
 
 -- nightfly, catppuccin-mocha, night-owl, nightfox
-local status, _ = pcall(vim.cmd, "colorscheme nightfox")
+local status, _ = pcall(vim.cmd, "colorscheme nordfox")
 if not status then
 	print("Colorscheme not found!")
 	return
