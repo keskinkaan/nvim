@@ -1,12 +1,12 @@
 -- import telescope plugin safely
-local telescope_setup, telescope = pcall(require, "telescope")
-if not telescope_setup then
+local status_ok, telescope = pcall(require, "telescope")
+if not status_ok then
 	return
 end
 
 -- import telescope actions safely
-local actions_setup, actions = pcall(require, "telescope.actions")
-if not actions_setup then
+local actions_ok, actions = pcall(require, "telescope.actions")
+if not actions_ok then
 	return
 end
 
@@ -14,7 +14,12 @@ end
 telescope.setup({
 	-- configure custom mappings
 	defaults = {
+		prompt_prefix = " ",
+		selection_caret = " ",
+		path_display = { "smart" },
+
 		file_ignore_patterns = { "node_modules", "html-report", "html-report/*", "docs", "coverage" },
+
 		mappings = {
 			i = {
 				["<C-k>"] = actions.move_selection_previous, -- move to prev result

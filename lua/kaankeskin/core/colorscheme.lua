@@ -1,9 +1,8 @@
--- set colorscheme to nightfly with protected call
--- in case it isn't installed
+-- import colorscheme safely
+local colorscheme = "tokyonight-night"
 
--- nightfly, catppuccin-mocha, night-owl, nightfox
-local status, _ = pcall(vim.cmd, "colorscheme nordfox")
-if not status then
+local status_ok, _ = pcall(vim.cmd, "colorscheme " .. colorscheme)
+if not status_ok then
 	print("Colorscheme not found!")
 	return
 end

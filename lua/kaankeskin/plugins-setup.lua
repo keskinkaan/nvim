@@ -37,6 +37,7 @@ return packer.startup(function(use)
 	use("catppuccin/nvim")
 	use("haishanh/night-owl.vim")
 	use("EdenEast/nightfox.nvim")
+	use("folke/tokyonight.nvim")
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -48,6 +49,7 @@ return packer.startup(function(use)
 
 	-- commenting with gc
 	use("numToStr/Comment.nvim")
+	use("JoosepAlviste/nvim-ts-context-commentstring")
 
 	-- file explorer
 	use("nvim-tree/nvim-tree.lua")
